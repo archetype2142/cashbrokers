@@ -17,6 +17,7 @@
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/rangeslider-pure@latest/dist/range-slider.css">
 
   <!-- Custom styles for this template -->
   <link href="css/landing-page.css" rel="stylesheet">
@@ -42,61 +43,29 @@
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
           <div class="container">
-  <div class="row">
-
-    <div class="col-md-12">
-      <form method="post" action="submit.php">
-        <ul class="contact-form">
-          <li>
-            <div class="col-md-6">
-              <input name="name" placeholder="Your Name" required="required" size="8" type="text">
-            </div>
-
-            <div class="col-md-6">
-              <input name="email" placeholder="Email" required="required" size="8" type="email">
-            </div>
-          </li>
-
-          <li>
-            <div class="col-md-6">
-              <input name="telefoon" placeholder="Phonenumber" required="required" size="8" type="text">
-            </div>
-
-            <div class="col-md-6">
-              <input name="bedrijf" placeholder="Company/Agency" required="required" size="8" type="text">
-            </div>
-          </li>
-
-          <li>
-            <div class="col-md-6">
-              <label>Budget Estimate </label>
-              <div id="slider-range-min"></div>
-            </div>
-            <div class="col-md-6">
-              <input type="text" id="amount" readonly>
-            </div>
-          </li>
-
-          <li>
-
-            <div class="col-md-12">
-              <textarea class="span12" name="details" placeholder="Project Details" required="required"></textarea>
-            </div>
-          </li>
-
-          <li>
-            <div class="col-md-12">
-              <button type="submit">Submit <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></button>
-            </div>
-          </li>
-
-
-        </ul>
-      </form>
-    </div>
-
-  </div>
-</div>
+            <form>
+              <div class="form-group">
+                <label style="float: left" class="pull-left" for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              </div>
+              <div class="form-group">
+                <label style="float: left" for="exampleInputPassword1">Name</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Name">
+              </div>
+              <div class="form-group">
+                <label style="float: left" for="exampleInputPassword1">Surname</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Surname">
+              </div>
+              <div class="form-group">
+                <label style="float: left" for="exampleInputPassword1">Amount</label>
+                <div class="slidecontainer">
+                  <input type="range" min="1" max="100" value="0" class="slider" id="myRange">
+                </div>
+                <span id="range_amount" class="blue_text">0</span><span> Zł</span>
+              </div>
+              <button style="float: left" type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -220,19 +189,7 @@
         <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
           <ul class="list-inline mb-2">
             <li class="list-inline-item">
-              <a href="#">O nas</a>
-            </li>
-            <li class="list-inline-item">&sdot;</li>
-            <li class="list-inline-item">
-              <a href="#">Kontakt</a>
-            </li>
-            <li class="list-inline-item">&sdot;</li>
-            <li class="list-inline-item">
               <a href="#">Regulamin</a>
-            </li>
-            <li class="list-inline-item">&sdot;</li>
-            <li class="list-inline-item">
-              <a href="#">Polityka Prywatności</a>
             </li>
           </ul>
           <p class="text-muted small mb-4 mb-lg-0">&copy; Cash Brokers 2020. Wszelkie prawa zastrzeżone</p>
@@ -242,11 +199,6 @@
             <li class="list-inline-item mr-3">
               <a href="#">
                 <i class="fab fa-facebook fa-2x fa-fw"></i>
-              </a>
-            </li>
-            <li class="list-inline-item mr-3">
-              <a href="#">
-                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
               </a>
             </li>
             <li class="list-inline-item">
@@ -263,10 +215,16 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
- <script type="text/javascript" src="script.js"></script>
-
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/rangeslider-pure@latest/dist/range-slider.js"></script>
+  <script>
+    var range_amount = document.getElementById("range_amount");
+    document.getElementById("myRange").addEventListener("change", (e) => { 
+      e.preventDefault(); 
+      console.log(e.target.value);
+      range_amount.innerText = parseInt(e.target.value) * 1500;
+    });
+  </script>
 </body>
 
 </html>
