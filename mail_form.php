@@ -1,19 +1,17 @@
-<?php 
-if(isset($_POST['submit'])){
-    $to = "malhotraritwick2011@gmail.com";
-    $from = $_POST['email'];
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $subject = "Form submission";
-    $subject2 = "Copy of your form submission";
-    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'] + $_POST['amount'];
-    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+<?PHP
+$sender = 'someone@somedomain.tld';
+$recipient = 'malhotraritwick2011@gmail.com';
 
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
-    // You can also use header('Location: thank_you.php'); to redirect to another page.
-    }
+$subject = "php mail test";
+$message = "php test message";
+$headers = 'From:' . $sender;
+
+if (mail($recipient, $subject, $message, $headers))
+{
+    echo "Message accepted";
+}
+else
+{
+    echo "Error: Message not accepted";
+}
 ?>
