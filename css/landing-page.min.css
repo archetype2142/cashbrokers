@@ -1,0 +1,114 @@
+/*!
+ * Start Bootstrap - Landing Page v5.0.8 (https://startbootstrap.com/themes/landing-page)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-landing-page/blob/master/LICENSE)
+ */body{font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif}h1,h2,h3,h4,h5,h6{font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700}header.masthead{position:relative;background-color:#343a40;background:url(../img/bg-masthead.jpg) no-repeat center center;background-size:cover;padding-top:8rem;padding-bottom:8rem}header.masthead .overlay{position:absolute;background-color:#212529;height:100%;width:100%;top:0;left:0;opacity:.3}header.masthead h1{font-size:2rem}@media (min-width:768px){header.masthead{padding-top:12rem;padding-bottom:12rem}header.masthead h1{font-size:3rem}}.showcase .showcase-text{padding:3rem}.showcase .showcase-img{min-height:30rem;background-size:cover}@media (min-width:768px){.showcase .showcase-text{padding:7rem}}.features-icons{padding-top:7rem;padding-bottom:7rem}.features-icons .features-icons-item{max-width:20rem}.features-icons .features-icons-item .features-icons-icon{height:7rem}.features-icons .features-icons-item .features-icons-icon i{font-size:4.5rem}.features-icons .features-icons-item:hover .features-icons-icon i{font-size:5rem}.testimonials{padding-top:7rem;padding-bottom:7rem}.testimonials .testimonial-item{max-width:18rem}.testimonials .testimonial-item img{max-width:12rem;box-shadow:0 5px 5px 0 #adb5bd}.call-to-action{position:relative;background-color:#343a40;background:url(../img/bg-masthead.jpg) no-repeat center center;background-size:cover;padding-top:7rem;padding-bottom:7rem}.call-to-action .overlay{position:absolute;background-color:#212529;height:100%;width:100%;top:0;left:0;opacity:.3}footer.footer{padding-top:4rem;padding-bottom:4rem}
+
+ .contact-form {
+  list-style-type: none;
+}
+.contact-form li div {
+  margin-bottom: 2.5em;
+}
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  margin: 0;
+  padding-bottom: 1.4em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  border-bottom: 3px solid slategrey;
+  background: #2B2E4A;
+  font-family: 'Roboto', sans-serif;
+  color: lightgrey;
+  font-weight: 700;
+  font-size: 18px;
+  transition: ease-in-out 0.25s;
+}
+.contact-form textarea {
+  min-height: 50px;
+  max-height: 500px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  resize: vertical;
+  overflow: hidden;
+}
+.contact-form ::-webkit-input-placeholder {
+  font-size: 12px;
+  color: slategrey;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.contact-form label {
+  font-size: 12px;
+  color: slategrey;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus,
+.contact-form button:focus {
+  outline: none;
+  resize: none;
+  border-bottom: 3px solid #db4d57;
+}
+.contact-form #slider-range-min {
+  outline: 0;
+  background: slategrey;
+  height: 3.6em;
+  border: 0;
+  border-radius: 0;
+}
+.contact-form #slider-range-min .ui-slider-range {
+  background: #db4d57;
+  border-radius: 0;
+}
+.contact-form #slider-range-min .ui-slider-handle {
+  outline: 0;
+  top: 1.1em;
+  margin-left: -.6em;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 0;
+  background: white;
+  cursor: pointer;
+}
+.contact-form #amount {
+  border: 0;
+  color: lightgrey;
+  font-weight: 400;
+  font-size: 28px;
+  padding-top: 1.1em;
+  letter-spacing: 3px;
+}
+.contact-form button {
+  color: lightgrey;
+  background: rgba(34, 34, 34, 0);
+  border: 3px solid #db4d57;
+  height: 74px;
+  width: 200px;
+  float: right;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: ease-in-out 0.25s;
+}
+.contact-form button span {
+  transition: ease-in-out 0.25s;
+}
+.contact-form button:hover {
+  background: #db4d57;
+  color: lightgrey;
+}
+.contact-form button:hover span {
+  padding-left: 10px;
+  color: white;
+}
