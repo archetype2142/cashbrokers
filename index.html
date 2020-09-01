@@ -43,27 +43,27 @@
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
           <div class="container">
-            <form>
+            <form action="mail_handler.php" method="post">
               <div class="form-group">
-                <label style="float: left" class="pull-left" for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <label style="float: left" class="pull-left" for="exampleInputEmail1">Adres email</label>
+                <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Wpisz swój email">
               </div>
               <div class="form-group">
-                <label style="float: left" for="exampleInputPassword1">Name</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Name">
+                <label style="float: left" for="exampleInputPassword1">Imię</label>
+                <input name="first_name" type="text" class="form-control" id="exampleInputPassword1" placeholder="Wpisz imię">
               </div>
               <div class="form-group">
-                <label style="float: left" for="exampleInputPassword1">Surname</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Surname">
+                <label style="float: left" for="exampleInputPassword1">Nazwisko</label>
+                <input name="last_name" type="text" class="form-control" id="exampleInputPassword1" placeholder="Wpisz nazwisko">
               </div>
               <div class="form-group">
-                <label style="float: left" for="exampleInputPassword1">Amount</label>
+                <label style="float: left" for="exampleInputPassword1">Wybierz kwotę</label>
                 <div class="slidecontainer">
-                  <input type="range" min="1" max="100" value="0" class="slider" id="myRange">
+                  <input name="amount" type="range" min="0" max="50" value="0" class="slider" id="myRange">
                 </div>
                 <span id="range_amount" class="blue_text">0</span><span> Zł</span>
               </div>
-              <button style="float: left" type="submit" class="btn btn-primary">Submit</button>
+              <button style="float: left" type="submit" class="btn btn-primary">Wybierz kwotę</button>
             </form>
           </div>
         </div>
@@ -222,7 +222,7 @@
     document.getElementById("myRange").addEventListener("change", (e) => { 
       e.preventDefault(); 
       console.log(e.target.value);
-      range_amount.innerText = parseInt(e.target.value) * 1500;
+      range_amount.innerText = parseInt(e.target.value) * 50000;
     });
   </script>
 </body>
