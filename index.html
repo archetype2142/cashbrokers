@@ -63,9 +63,9 @@
               <div class="form-group">
                 <label style="float: left" for="exampleInputPassword1">Wybierz kwotę</label>
                 <div class="slidecontainer">
-                  <input name="amount" type="range" min="0" max="50" value="0" class="slider" id="myRange">
+                  <input name="amount" type="range" min="1" max="100" value="0" class="slider" id="myRange">
                 </div>
-                <span id="range_amount" class="blue_text">0</span><span> Zł</span>
+                <span id="range_amount" class="blue_text">10000</span><span> Zł</span>
               </div>
               <button style="float: left" type="submit" class="btn btn-primary" onclick="sendEmail()">Wyślij wniosek</button>
             </form>
@@ -226,7 +226,7 @@
     document.getElementById("myRange").addEventListener("change", (e) => { 
       e.preventDefault(); 
       console.log(e.target.value);
-      range_amount.innerText = parseInt(e.target.value) * 50000;
+      range_amount.innerText = parseInt(e.target.value) * 10000;
     });
   </script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
