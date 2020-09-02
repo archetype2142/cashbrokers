@@ -43,7 +43,7 @@
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
           <div class="container">
-            <form action="mail_form.php" method="post">
+            <form action="mail_form.php" method="POST">
               <div class="form-group">
                 <label style="float: left" class="pull-left" for="exampleInputEmail1">Adres email</label>
                 <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Wpisz swój email">
@@ -57,13 +57,17 @@
                 <input name="last_name" type="text" class="form-control" id="exampleInputPassword1" placeholder="Wpisz nazwisko">
               </div>
               <div class="form-group">
+                <label style="float: left" for="exampleInputPassword1">Nr telefonu</label>
+                <input name="phone" type="number" class="form-control" id="exampleInputPassword1" placeholder="Wpisz swój nr telefonu">
+              </div>
+              <div class="form-group">
                 <label style="float: left" for="exampleInputPassword1">Wybierz kwotę</label>
                 <div class="slidecontainer">
                   <input name="amount" type="range" min="0" max="50" value="0" class="slider" id="myRange">
                 </div>
                 <span id="range_amount" class="blue_text">0</span><span> Zł</span>
               </div>
-              <button style="float: left" type="submit" class="btn btn-primary">Wybierz kwotę</button>
+              <button style="float: left" type="submit" class="btn btn-primary" onclick="sendEmail()">Wyślij wniosek</button>
             </form>
           </div>
         </div>
@@ -197,12 +201,12 @@
         <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
           <ul class="list-inline mb-0">
             <li class="list-inline-item mr-3">
-              <a href="#">
+              <a href="https://www.facebook.com/cashbrokers1">
                 <i class="fab fa-facebook fa-2x fa-fw"></i>
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="#">
+              <a href="https://www.instagram.com/cash.brokers/">
                 <i class="fab fa-instagram fa-2x fa-fw"></i>
               </a>
             </li>
@@ -225,6 +229,7 @@
       range_amount.innerText = parseInt(e.target.value) * 50000;
     });
   </script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 </html>
